@@ -2,48 +2,48 @@
 
 // Dorn conflict
 CHAIN IF WEIGHT #-1 ~Global("C0SireneDorn","GLOBAL",2)~ THEN C0SirenJ C0dorn1
-~<CHARNAME>, this man...~
+~<CHARNAME>，这个人……~
 DO ~SetGlobal("C0SireneDorn","GLOBAL",3)~
-== DORNJ%BG1_EET_% ~What do you want, fiendling?~
-== C0SirenJ ~You know exactly what I want to say. Do not try and hide it. You may be capable of concealing it from our leader, but not from me.~
-= ~You have the touch of the Lower Planes upon you. I know it too well, blackguard. I refuse to walk with you at my side.~
-== DORNJ%BG1_EET_% ~You think to unnerve me by unveiling my power? I care not. If you have a problem with my presence, show it with your blade. I will enjoy spitting your cowardly self upon mine.~
+== DORNJ%BG1_EET_% ~你要什么，小鬼？~
+== C0SirenJ ~你清楚我想说什么。别想遮掩。你也许能瞒过我们的领头人，瞒不过我。~
+= ~你身上有下层位面的气息。我太熟悉了，恶徒。我拒绝与你并肩同行。~
+== DORNJ%BG1_EET_% ~你以为揭我的底就能叫我慌？我不在乎。你若对我的存在有意见，就用刀来说明。我很乐意把你这种懦东西串到我的刀上。~
 END
-	++ ~Can't you both get along?~ EXTERN C0SirenJ C0dorn2
-	++ ~I'm sorry, Sirene, but I still need Dorn. Do as you must.~ EXTERN C0SirenJ C0dorn3
-	++ ~I never liked you anyway, Dorn.~ EXTERN DORNJ%BG1_EET_% C0dorn4
+	++ ~你们两个就不能好好相处？~ EXTERN C0SirenJ C0dorn2
+	++ ~对不起，塞琳，可我还需要多恩。你该怎么做就怎么做。~ EXTERN C0SirenJ C0dorn3
+	++ ~反正我从没喜欢过你，多恩。~ EXTERN DORNJ%BG1_EET_% C0dorn4
 
 CHAIN C0SirenJ C0dorn2
-~I will neither stand his presence nor allow him to walk away and cause suffering to innocents. One such as he deserves no mercy or compassion.~
-== DORNJ%BG1_EET_% ~The next one to suffer with be you, paladin whelp.~
-== C0SirenJ ~Draw your blade, soulless bastard.~
+~我既不容他留下，也不容他就此走开再去害无辜的人。他这种人，不配得半点仁慈与怜悯。~
+== DORNJ%BG1_EET_% ~下一个受苦的就是你，圣武士小子。~
+== C0SirenJ ~拔刀吧，没魂的杂种。~
 END
-	++ ~I'm sorry, Sirene, but I still need Dorn. Do as you must.~ EXTERN C0SirenJ C0dorn3
-	++ ~I never liked you anyway, Dorn.~ EXTERN DORNJ%BG1_EET_% C0dorn4
-	++ ~Oh, very well. Get to it.~ EXTERN C0SirenJ C0dorn5
+	++ ~对不起，塞琳，可我还需要多恩。你该怎么做就怎么做。~ EXTERN C0SirenJ C0dorn3
+	++ ~反正我从没喜欢过你，多恩。~ EXTERN DORNJ%BG1_EET_% C0dorn4
+	++ ~哦，好吧。那就来吧。~ EXTERN C0SirenJ C0dorn5
 
 CHAIN C0SirenJ C0dorn3
-~As you wish. Forgive me for what I must do. May Ilmater have mercy on your soul, <CHARNAME>.~
+~如你所愿。恕我不得不如此。愿伊尔梅特怜悯你的灵魂，<CHARNAME>。~
 DO ~SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy() Attack("Dorn")~ 
 EXIT
 
 CHAIN DORNJ%BG1_EET_% C0dorn4
-~Die then, sanctimonious fools!~
+~那就死吧，假仁假义的蠢货！~
 DO ~SetGlobal("%bg1_eet_dornp%ARTY","GLOBAL",0) LeaveParty() Enemy() Attack("C0Sirene")~ 
 EXIT
 
 CHAIN C0SirenJ C0dorn5
-~Your judgment is at hand!~ [C0SIR021]
+~你的裁决到了！~ [C0SIR021]
 DO ~SetGlobal("C0SireneDornConflict","GLOBAL",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneDornConflict","GLOBAL",1)~ THEN C0SirenP C0dorn6
-~Those that have suffered at your hands are avenged.~
+~在你手下受苦的人，仇已报了。~
 DO ~SetGlobal("C0SireneDornConflict","GLOBAL",2) JoinParty()~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneDornConflict","GLOBAL",1)~ THEN DORNP%BG1_EET_% C0dorn7
-~Ha! Weak, as they all are. I did truly enjoy that. Let us leave her to rot, <CHARNAME>.~
+~哈！软弱，跟他们一个个都一样。我着实享受了这一场。让她烂在这儿吧，<CHARNAME>。~
 DO ~SetGlobal("C0SireneDornConflict","GLOBAL",2) JoinParty()~
 EXIT
 	
@@ -56,18 +56,18 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneNeera1","GLOBAL",0)~ THEN BNEERA%BG1_EET_% C0SireneNeera1
-~You know what I like about you, Sirene?~
+~你知道我喜欢你哪一点么，塞琳？~
 DO ~SetGlobal("C0SireneNeera1","GLOBAL",1)~
-== BC0SIREN ~Tell me.~
-== BNEERA%BG1_EET_% ~You became a paladin because you wanted to. Even though it's kinda weird and I'm not sure if it suits you, but you chose to do it.~
-== BC0SIREN ~That is not entirely true, Neera. I did grow up amongst priests of Ilmater, after all. There were not many options available to me.~
-== BNEERA%BG1_EET_% ~Yeah, but, it's not like your paladin powers were just forced on you. Nothing stopped you from choosing what you wanted to be, right?~
-= ~That's what annoys me about my magic. I mean, it's fun, but it just comes to me, whether I like it or not.~
-== BC0SIREN ~But you do not want to be rid of it, do you? 'Twould surely be possible, if you were inclined to.~
-== BNEERA%BG1_EET_% ~Well, that's true. I do like my magic, even if it tends to go rogue and scare me every time I finish an incantation.~
-== BC0SIREN ~My role as a paladin is not easy, either... and the devil blood only makes things worse.~
-== BNEERA%BG1_EET_% ~If it helps, I know what it's like to have horns! But... that's only cause I turned myself into a goat one time. Yeesh, that wasn't fun.~
-= ~Also, I summoned a pit fiend this one time when I was hungry and tried to summon a pie. That was scary. You aren't scary though, you're nice.~
+== BC0SIREN ~你说。~
+== BNEERA%BG1_EET_% ~你当圣武士，是因为你自己想当。虽说这事有点怪，我也不确定适不适合你，可那是你自己选的。~
+== BC0SIREN ~也不全然如此，妮拉。毕竟我是在伊尔梅特的祭司中间长大的。当时我能有的选择并不多。~
+== BNEERA%BG1_EET_% ~是啊，可你的圣武士本领也不是硬塞给你的。没什么拦着你去选你想当的，对吧？~
+= ~招我烦的正是我的魔法。我是说，它挺好玩，可它自己就来了，不管我喜不喜欢。~
+== BC0SIREN ~可你并不想摆脱它，是吧？你若愿意，那总归是办得到的。~
+== BNEERA%BG1_EET_% ~嗯，这倒是。我确实喜欢我的魔法，哪怕它老是失控，每次念完咒都把我吓一跳。~
+== BC0SIREN ~我这圣武士的位分也不轻松……而魔种的血只会叫事情更糟。~
+== BNEERA%BG1_EET_% ~要说安慰的话，我知道长角是什么滋味！不过……那是因为我有一回把自己变成了一只山羊。唉，那可不好玩。~
+= ~还有一回，我饿了想召个馅饼，结果召出了一头深渊魔。那可真吓人。你倒不吓人，你人很好。~
 EXIT
 
 // Rasaad
@@ -79,15 +79,15 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneRasaad1","GLOBAL",0)~ THEN BRASAAD%BG1_EET_% C0SireneRasaad1
-~I sense you have wandered long and far from home as well, my friend.~
+~我觉出你也是远离家乡、走了很远，我的朋友。~
 DO ~SetGlobal("C0SireneRasaad1","GLOBAL",1)~ 
-== BC0SIREN ~Not home, though I have travelled far from my church, 'tis true.~
-== BRASAAD%BG1_EET_% ~Do you miss anything that you have left behind?~
-== BC0SIREN ~No, I- from whence comes this, Rasaad?~
-== BRASAAD%BG1_EET_% ~I watched an unusual-colored hare flee from our presence today. Its coat reminded me of the golden deserts of home, and soon I began seeing the Calim desert everywhere I looked.~
-== BC0SIREN ~You must miss home greatly.~
-== BRASAAD%BG1_EET_% ~It is not Calimshan that I miss, but my brother. We would sit upon the peaks of the massive dunes of the desert, exhausted after long hours of sparring, counting stars and fill each others' sleeves with sand.~
-== BC0SIREN ~And then he died?~
-== BRASAAD%BG1_EET_% ~...yes.~
-== BC0SIREN ~I wish I had a brother. At least you have memories to be fond of.~
+== BC0SIREN ~不是家乡，不过我确实远离了我的教会，这话不假。~
+== BRASAAD%BG1_EET_% ~你留下的东西里，有什么是你想念的么？~
+== BC0SIREN ~不，我——你怎么会问起这个，拉萨德？~
+== BRASAAD%BG1_EET_% ~今天我瞧见一只颜色少见的野兔从我们跟前逃开。它那身毛叫我想到家乡的金色沙海，很快我眼里到处都是卡利姆沙漠了。~
+== BC0SIREN ~你一定很想念家乡。~
+== BRASAAD%BG1_EET_% ~我想念的不是卡林杉，是我的兄长。我们常坐在大沙丘的顶上，对练了一整天累得不行，就数着星星，把彼此的袖子都灌满沙子。~
+== BC0SIREN ~然后他死了？~
+== BRASAAD%BG1_EET_% ~……是。~
+== BC0SIREN ~我但愿我也有个兄长。至少你还有可珍爱的回忆。~
 EXIT

@@ -4,197 +4,197 @@ BEGIN C02SIREN
 
 IF ~AreaCheck("BD0111")
 Global("C02SireneMetSoD","GLOBAL",0)~ THEN BEGIN j0
- SAY ~Yes...? Is here something I can do for you?~ [C0SIR013]
-+ ~!Alignment(Player1,MASK_EVIL)~ + ~It hasn't been that long. Have you forgotten me already, Sirene?~ DO ~SetGlobal("C0SireneMetBG1","GLOBAL",1) SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + j1
-+ ~!Alignment(Player1,MASK_EVIL) !BeenInParty("C0Sirene")~ + ~Do I know you, lady?~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + j2
-+ ~Alignment(Player1,MASK_EVIL)~ + ~Do I know you, lady?~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + jx
+ SAY ~是……？有什么我能帮您的？~ [C0SIR013]
++ ~!Alignment(Player1,MASK_EVIL)~ + ~也没过多久。你这么快就把我忘了，塞琳？~ DO ~SetGlobal("C0SireneMetBG1","GLOBAL",1) SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + j1
++ ~!Alignment(Player1,MASK_EVIL) !BeenInParty("C0Sirene")~ + ~我认得你么，女士？~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + j2
++ ~Alignment(Player1,MASK_EVIL)~ + ~我认得你么，女士？~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + jx
 END
 
 IF ~~ jx
-SAY ~No... no, I think not. Forgive me, but there is much to do here. I must ask that you leave me to tend to those around us.~
+SAY ~不……不，我想不认得。恕我，这里事太多。只好请您让我去照料身边的人。~
 IF ~~ EXIT
 END
 
 IF ~~ j1
-SAY ~Oh, 'tis you, <CHARNAME>. No, I have not, fortunately... 'tis good to see you again, my friend. But I thought you had remained at the palace since we parted?~
-++ ~We can get to that later. How have you been?~ + j3
-++ ~You look exhausted. Have you even found time to rest?~ + j4
-++ ~I need your help, Sirene.~ + j5
+SAY ~哦，是你，<CHARNAME>。不，我没有忘，幸好……再见到你真好，我的朋友。只是我以为我们分别之后，你一直留在宫里？~
+++ ~这个待会儿再说。你近来可好？~ + j3
+++ ~你看上去疲惫不堪。你还有工夫歇息么？~ + j4
+++ ~我需要你帮忙，塞琳。~ + j5
 END
 
 IF ~~ j2
-SAY ~No, I think not... but, ah, I believe I recognize you, though I do not think we have met... <CHARNAME>, the hero of Baldur's Gate. 'Twas your efforts that removed the Iron Throne from power. I have heard your name repeated many times since I arrived to this city.~
-= ~Forgive my lack of manners. I am Sirene of Ilmater, the Crying God. What may I do for you, my <PRO_LADYLORD>? There is much I must do here, so I cannot spare too much time.~
-++ ~Who are all these people in this place?~ + j2a
-++ ~You seem like a fighting woman. What are you doing here?~ + j2b
-++ ~I'm looking for capable men and women to join me on the road to Dragonspear Castle. Would you like to join me?~ + j2c
-++ ~I don't need anything from you. Farewell.~ + j10
+SAY ~不，我想没有……不过，啊，我想我认得您，虽说我们应当没见过……<CHARNAME>，博德之门的英雄。正是您的作为把铁王座从权势上拉了下来。我到这座城之后，听过许多遍您的名字。~
+= ~恕我失礼。我是塞琳，侍奉哭泣之神伊尔梅特。我能为您做什么，我的<PRO_LADYLORD>？这里有许多事等我做，恐怕匀不出太多工夫。~
+++ ~这里这些人都是谁？~ + j2a
+++ ~你看上去像个能打的女人。你在这里做什么？~ + j2b
+++ ~我在找能干的男女，随我一同往龙矛堡去。你愿意同行么？~ + j2c
+++ ~我不需要你什么。告辞。~ + j10
 END
 
 IF ~~ j2a
-SAY ~*sigh* I had thought that would be obvious, my <PRO_LADYLORD>. They are refugees from the north, who fled from the ongoing threat.~
+SAY ~*叹气* 我还当这很明显，我的<PRO_LADYLORD>。他们是北边来的难民，为着那还在延续的威胁逃出来的。~
 IF ~~ + j6
 END
 
 IF ~~ j2b
-SAY ~Aye, you are not wrong, my <PRO_LADYLORD>. I am, in fact, a paladin of the Crying God, and I have seen battle in the past. But I have no love for bloodshed, and when there are those in need of my aid, I strive to do everything I can.~
+SAY ~是，您没说错，我的<PRO_LADYLORD>。我确是哭泣之神的圣武士，也上过战场。只是我不爱流血；但凡有人需要我援手，我便尽力去做。~
 IF ~~ + j6
 END
 
 IF ~~ j2c
-SAY ~Join you? I... would not be opposed to it, but... I have a duty to those that require my aid here, in this place. What would you need of me?~
-++ ~I intend to travel north to Dragonspear Castle and end the crusade directly. I could use the help of someone like you.~ + j7
-++ ~Never mind. These people can use as much help as they can get. Goodbye.~ + j10
+SAY ~随你同行？我……并不反对，只是……我在这里有职分，这些人需要我援手。你需要我做什么？~
+++ ~我打算北上龙矛堡，直接了结这场十字军。若有你这样的人相助，正是我所需要的。~ + j7
+++ ~算了。这些人能得的帮助越多越好。告辞。~ + j10
 END
 
 IF ~~ j3
-SAY ~I wish I could say that I have been well, my friend... but as you can see around you, there has been... much to do as of late.~
+SAY ~但愿我能说自己过得不错，我的朋友……可如你所见，近来……事太多了。~
 IF ~~ + j6
 END
 
 IF ~~ j4
-SAY ~Not often, at least... within the past few days, as I recall. I wish there was time to spare... but there are too many people in need to consider it.~
+SAY ~不常有，至少……回想这几日。但愿能匀出工夫，可要顾的人太多，也就无从谈起。~
 IF ~~ + j6
 END
 
 IF ~~ j5
-SAY ~There are... still many I must aid here, but for you, my friend, I will listen, at the very least. What is it?~
-++ ~I'm going to Dragonspear Castle with the Flaming Fist to face the armies of the Shining Lady. What do you know of her?~ + j5a
-++ ~Caelar Argent's men tried to assassinate me, right here in the city. I'm planning on taking the fight to her.~ + j5b
-++ ~It's a long story, and I'd rather not waste time discussing it here. Would you join me again?~ + j5c
-++ ~On second thought, there's nothing I need from you. Continue with your work.~ + j8
+SAY ~这里……还有许多要我去救的人，可为了你，我的朋友，我至少肯听。什么事？~
+++ ~我要随燃焰之拳去龙矛堡，迎战光辉女士的军队。关于她，你知道些什么？~ + j5a
+++ ~凯拉·阿金特的人就在这城里想刺杀我。我打算把这场仗打到她头上。~ + j5b
+++ ~说来话长，我不想在这里浪费时间讲。你愿意再与我同行么？~ + j5c
+++ ~再想想，我没什么需要你的。继续你的活吧。~ + j8
 END
 
 IF ~~ j5a
-SAY ~In my travels, I have heard much of the Shining Lady, Caelar Argent... a strong and resolute woman, they have described her.~
-= ~There were many who wished to join her crusade, men who spoke her name with... reverence, almost worship. I would never have expected her actions to cause so much suffering, until I saw for myself upon my return to Baldur's Gate.~
-= ~I know not what would drive such a person to raise and lead an army against innocent men, but no matter her motivations... she must be stopped. There is no hope for these men otherwise.~
-++ ~She's after me, apparently, for whatever reason. That's why I need your help. Will you join me?~ + j5c
-+ ~!Global("C02SireneKnowsLady","GLOBAL",1)~ + ~You sound as though you have met her personally.~ + j5d
-++ ~I see. Thank you for telling me this. I'll be on my way now.~ + j8
+SAY ~行旅之中，我听过许多关于光辉女士、凯拉·阿金特的事……人们说她是个坚强果决的女人。~
+= ~有许多人想加入她的十字军，那些人说起她的名字，带着……敬意，近乎膜拜。我本不指望她的作为会带来这么多苦，直到我回到博德之门，亲眼看见。~
+= ~我不知道是什么驱得这样一个人举兵去攻打无辜的人；可不论她动机如何……她必须被拦下。不然这些人就没有指望了。~
+++ ~看来她是冲着我来的，不管为什么。所以我需要你帮忙。你愿意同行么？~ + j5c
++ ~!Global("C02SireneKnowsLady","GLOBAL",1)~ + ~听你这口气，像是亲自见过她。~ + j5d
+++ ~我明白了。多谢你告诉我这些。我这就上路。~ + j8
 END
 
 IF ~~ j5b
-SAY ~Caelar Argent's men? That is... most strange, indeed. Her crusade may be a threat to the people, yet her character... it does not seem her way.~
-++ ~What do you mean?~ + j5a
-++ ~Have you met her?~ + j5d
-++ ~Regardless, I could use your help with facing her.~ + j5c
+SAY ~凯拉·阿金特的人？这……当真古怪。她的十字军或许是对这些人的威胁，可她的为人……不像会做这种事。~
+++ ~你什么意思？~ + j5a
+++ ~你见过她？~ + j5d
+++ ~总之，迎她的时候，我可以用得上你。~ + j5c
 END
 
 IF ~~ j5c
-SAY ~I... wish I could, <CHARNAME>, but look around you. There are too many here that have lost everything as a result of the ongoing troubles, and many bear the marks of injury and exhaustion. I cannot abandon them, at least, not without reason.~
-++ ~There's a reason. We can end the crusade directly, together, and put an end this suffering.~ + j7
-++ ~I see. That's a shame, but I understand your position. I won't force you to change your mind.~ + j9
-++ ~Fine. I expected better from you, but I'll deal with the Shining Lady by myself.~ + j9
+SAY ~我……但愿我能，<CHARNAME>，可你看看四周。这里太多人因这场乱事失去了一切，不少还带着伤、累得不成样子。我不能丢下他们——至少，不能没有个说法就丢下。~
+++ ~有个说法。我们能一起直接了结这场十字军，把这苦给断了。~ + j7
+++ ~我明白。可惜，不过我懂你的处境。我不会逼你改主意。~ + j9
+++ ~好。我本指望你更好些，可光辉女士我自去对付。~ + j9
 END
 
 IF ~~ j5d
-SAY ~I have... seen the Shining Lady with my own eyes, aye, though 'tis not worth discussing at length at the moment. Perhaps I could tell you of it another time.~
+SAY ~我确实……亲眼见过光辉女士，是；只是这会儿不值得细说。也许改日我讲给你听。~
 IF ~!Global("C02SireneKnowsLady","GLOBAL",1)~ DO ~SetGlobal("C02SireneKnowsLady","GLOBAL",1)~ + j5a
 IF ~Global("C02SireneKnowsLady","GLOBAL",1)~ + j11
 END
 
 IF ~~ j6
-SAY ~These men and women were fortunate enough to flee from the chaos of the Shining Lady's crusade. Many did not escape unscathed. I have spent every waking minute tending to their needs... yet for every one I cure, two more come through the doors. There seems to be no end in sight.~
-++ ~Fleeing from the crusade, you say? What do you know about the Shining Lady?~ + j5a
-+ ~BeenInParty("c0sirene")~ + ~I have need of your assistance, Sirene.~ + j5
-++ ~You could do more good elsewhere. Join me, and we can strike at the heart of the crusade together.~ + j7
-++ ~In that case, I shan't keep you. Farewell, Sirene.~ + j8
+SAY ~这些男女算是侥幸，从光辉女士十字军的乱局里逃了出来。许多人逃出来时已不是完好的。我醒着的每一刻都在照料他们……可我治好一个，门口就再进两个。看不到头。~
+++ ~你说他们是从十字军那儿逃来的？关于光辉女士，你知道什么？~ + j5a
++ ~BeenInParty("c0sirene")~ + ~我需要你相助，塞琳。~ + j5
+++ ~你在别处能做得更多。随我来，我们便能一同直击十字军的心口。~ + j7
+++ ~既如此，我不耽搁你。告辞，塞琳。~ + j8
 END
 
 IF ~~ j7
-SAY ~To fight the crusade directly... I have considered it. And... though it pains me to admit this, my efforts here seem a hopeless endeavour... no matter how many I help in this place, I cannot hope to save them all so long as the crusade continues.~
-= ~Aye... I think that I will. Even if you had not come to me, perhaps I would have went regardless. Better that we met here, that I might share your company sooner.~
-= ~My sword is at your command, <CHARNAME>. 'Tis an honor to serve you.~
+SAY ~直接与十字军对敌……我想过。而且……虽然说出这话叫我难受，我在这里的尽力，看来是场无望的活计……只要十字军还在，我在这儿救多少人，也救不了他们全部。~
+= ~是……我想我会的。就算你没来找我，也许我终究也会去。我们在此相遇倒更好，我能早些与你同行。~
+= ~我的剑听你调遣，<CHARNAME>。能侍奉你，是我的荣幸。~
 IF ~~ DO ~AddJournalEntry(@1,INFO) SetGlobal("bd_joined","LOCALS",1) JoinParty()~ EXIT
 END
 
 IF ~~ j8
-SAY ~Farewell, <CHARNAME>. Perhaps... no, I will need more time to think on this. May we meet again.~
+SAY ~告辞，<CHARNAME>。也许……不，这件事我还得再想想。愿我们再会。~
 IF ~~ EXIT
 END
 
 IF ~~ j9
-SAY ~Forgive me, <CHARNAME>. May Ilmater guide you through your trials, and may you be victorious against the crusade. Farewell.~
+SAY ~恕我，<CHARNAME>。愿伊尔梅特引你走过试炼，愿你战胜十字军。告辞。~
 IF ~~ EXIT
 END
 
 IF ~~ j10
-SAY ~Farewell. May Ilmater give you the strength to bear your suffering.~
+SAY ~告辞。愿伊尔梅特赐你力量，担起你的苦。~
 IF ~~ EXIT
 END
 
 IF ~~ j11
-SAY ~Is there something else you need, <CHARNAME>? I can spare time for you.~
-++ ~I'm going to Dragonspear Castle with the Flaming Fist to face the armies of the Shining Lady. What do you know of her?~ + j5a
-++ ~Caelar Argent's men tried to assassinate me, right here in the city. I'm planning on taking the fight to her.~ + j5b
-++ ~Would you consider joining my party, Sirene?~ + j5c
-++ ~On second thought, there's nothing I need from you. Continue with your work.~ + j8
+SAY ~还有别的需要么，<CHARNAME>？我能为你匀些工夫。~
+++ ~我要随燃焰之拳去龙矛堡，迎战光辉女士的军队。关于她，你知道些什么？~ + j5a
+++ ~凯拉·阿金特的人就在这城里想刺杀我。我打算把这场仗打到她头上。~ + j5b
+++ ~你愿否加入我的队伍，塞琳？~ + j5c
+++ ~再想想，我没什么需要你的。继续你的活吧。~ + j8
 END
 
 IF ~AreaCheck("BD0111")
 Global("C02SireneMetSoD","GLOBAL",1)~ THEN BEGIN k0
-SAY ~Forgive me... there are many I must tend for. I have no time to talk at the moment.~
-+ ~!Alignment(Player1,MASK_EVIL)~ + ~I need someone like you to join me on the road to the north, to face the Shining Lady's crusade. Will you accept?~ + j7
-++ ~Then I will not keep you.~ EXIT
+SAY ~恕我……这里许多人等我照料。我这会儿没工夫说话。~
++ ~!Alignment(Player1,MASK_EVIL)~ + ~我需要你这样的人随我北上，去迎光辉女士的十字军。你肯么？~ + j7
+++ ~那我便不耽搁你。~ EXIT
 END
 
 // Post-Baldur's Gate
 
 IF ~!AreaCheck("BD0111") Global("C02SireneMetSoD","GLOBAL",0)~ THEN BEGIN k0
- SAY ~Oh... greetings, <CHARNAME>.~ [C0SIR000]
-+ ~Global("C02SireneMetSoD","GLOBAL",0)~ + ~Sirene. It's good to see you again.~ DO ~SetGlobal("C0SireneMetBG1","GLOBAL",1) SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k1
-+ ~Global("C02SireneMetSoD","GLOBAL",0)~ + ~I remember you. What are you doing here?~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k1
-+ ~Global("C02SireneMetSoD","GLOBAL",0) !BeenInParty("c0sirene")~ + ~I don't believe we've met, my lady. May I know your name?~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k2
-+ ~Global("C02SireneMetSoD","GLOBAL",1)~ + ~I thought you were remaining at the Gate.~ + k3
-+ ~Global("C02SireneMetSoD","GLOBAL",1)~ + ~It's good to see you here. Will you join me?~ + k4
-++ ~I require nothing of you.~ EXIT
+ SAY ~哦……你好，<CHARNAME>。~ [C0SIR000]
++ ~Global("C02SireneMetSoD","GLOBAL",0)~ + ~塞琳。再见到你真好。~ DO ~SetGlobal("C0SireneMetBG1","GLOBAL",1) SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k1
++ ~Global("C02SireneMetSoD","GLOBAL",0)~ + ~我记得你。你在这里做什么？~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k1
++ ~Global("C02SireneMetSoD","GLOBAL",0) !BeenInParty("c0sirene")~ + ~我想我们没见过，女士。可以知道你的名字么？~ DO ~SetGlobal("C02SireneMetSoD","GLOBAL",1)~ + k2
++ ~Global("C02SireneMetSoD","GLOBAL",1)~ + ~我以为你要留在城门那边。~ + k3
++ ~Global("C02SireneMetSoD","GLOBAL",1)~ + ~在这里见到你真好。你愿否与我同行？~ + k4
+++ ~我不需要你什么。~ EXIT
 END
 
 IF ~~ k1
-SAY ~'Tis good to see you again as well, my friend. I had thought it would be many seasons before I met you again, but... I am glad to be wrong.~
-++ ~So, you've decided to fight the crusade too?~ + k5
-++ ~Join me once more, and we'll face the crusade together.~ + k4
-++ ~As am I, though I don't have time to talk right now.~ EXIT
+SAY ~再见到你也好，我的朋友。我原以为要过许多季才能再见你，可是……我很高兴自己错了。~
+++ ~那么，你也决定打这场十字军了？~ + k5
+++ ~再随我一次吧，我们一同迎战十字军。~ + k4
+++ ~我也如此，只是这会儿没工夫说话。~ EXIT
 END
 
 IF ~~ k2
-SAY ~My name is Sirene. I am a paladin of Ilmater, the Crying God. If the... traces of my heritage concern you, <CHARNAME>, rest assured that I am everything I claim to be.~
-++ ~Why are you fighting the crusade?~ + k5
-++ ~How does a tiefling come into the service of the church of Ilmater?~ + k6
-++ ~Having a paladin in my group could be helpful. Join me.~ + k4
-++ ~That is all I require at the moment.~ EXIT
+SAY ~我叫塞琳。我是伊尔梅特的圣武士，侍奉哭泣之神。若我身上……祖血的痕迹叫你介意，<CHARNAME>，请放心，我确实是我所说的那个人。~
+++ ~你为何要打这场十字军？~ + k5
+++ ~一个提夫林，怎么会进入伊尔梅特教会的侍奉？~ + k6
+++ ~队里有个圣武士会很有用。随我来。~ + k4
+++ ~这会儿我要的就这些。~ EXIT
 END
 
 IF ~~ k3
-SAY ~I had intended to, aye, but... after considering my position, I decided that my place was here, with those that would bring the crusade to its end.~
-= ~There were many who were capable of taking my place, and this seemed the best decision... so if you will have me, I would gladly join you.~
-++ ~Then you shall. Come, join my side.~ + k4
-++ ~I don't need you at the moment.~ EXIT
+SAY ~我本打算去的，是；可是……考虑过自己的处境后，我认定我该在这里，和那些要了结十字军的人一道。~
+= ~能替我的人不少，这看来是最好的决断……所以你若肯要我，我乐意随你。~
+++ ~那就这样。来，站到我身边。~ + k4
+++ ~我此刻不需要你。~ EXIT
 END
 
 IF ~~ k4
-SAY ~Aye, I am yours to command.~
+SAY ~是，我听你调遣。~
 IF ~~ DO ~AddJournalEntry(@1,INFO) SetGlobal("bd_joined","LOCALS",1) JoinParty()~ EXIT
 END
 
 IF ~~ k5
-SAY ~I have seen with my own eyes the suffering was caused by the Shining Lady's crusade... countless men and women who lost everything they had, fleeing to the city hoping for shelter, their pleas drowned out by each others' voices... 'twas too much for me to bear.~
-= ~Regardless of her motivations, Caelar Argent must be stopped, and that is why I am here.~
-++ ~Then you should join my group, so that we may face her together.~ + k4
-++ ~An admirable stance, but I have no need for you right now.~ EXIT
+SAY ~我亲眼见过光辉女士的十字军造成的苦……无数男女失掉了一切，逃进城来盼个庇护，他们的哀求被彼此的声音淹没……我实在受不住。~
+= ~不论她动机如何，凯拉·阿金特必须被拦下，这就是我在此的缘由。~
+++ ~那你就该加入我的队伍，好让我们一同迎她。~ + k4
+++ ~这立场可敬，可我这会儿用不着你。~ EXIT
 END
 
 IF ~~ k6
-SAY ~For my fell blood, I was orphaned not long after I was born, and saved by a pilgrim of Ilmater. I was raised among the faith as a ward of the church, and taught in their ways. In time I discovered that I could serve Ilmater as well with steel as I could with chants and prayers. When I was of age, I left my home village to become a travel in search for those in need.~
-++ ~What brought you to fight against the crusade?~ + k5
-++ ~In that case, I could use someone such as you in my group. Would you care to join me?~ + k4
-++ ~That is all for now.~ EXIT
+SAY ~因我这份魔血，我出生不久就成了孤儿，被一位伊尔梅特的朝圣者救下。我在教会里长大，是教会的受养人，受教于他们的道。后来我发觉，我既能以刀剑侍奉伊尔梅特，也能以诵唱和祈祷侍奉。到了年纪，我离开家乡的村子，做个行者，去寻找需要的人。~
+++ ~是什么让你来打这场十字军？~ + k5
+++ ~既如此，我队里正用得上你这样的人。你愿意随我么？~ + k4
+++ ~这会儿就这些。~ EXIT
 END
 
 IF ~!AreaCheck("BD0111") Global("C02SireneMetSoD","GLOBAL",1)~ THEN BEGIN l0
-SAY ~Greetings to you again, <CHARNAME>. Do you need something?~
-++ ~Would you care to join my party?~ + k4
-++ ~I require the assistance of a paladin.~ + k4
-++ ~Not at the moment.~ EXIT
+SAY ~又见面了，<CHARNAME>。你需要什么？~
+++ ~你愿意加入我的队伍么？~ + k4
+++ ~我要一位圣武士相助。~ + k4
+++ ~现在不用。~ EXIT
 END

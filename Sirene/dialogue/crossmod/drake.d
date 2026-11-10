@@ -5,12 +5,12 @@ See("C0Drake")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneDrake1","GLOBAL",0)~ THEN BC0Siren C0SireneDrake1
-~What is it, Drake? You look upon me as though I am but an object of fascination. What is it about me that draws such a smirk to your face?~
+~怎么了，德雷克？你看我的样子，像在看什么稀罕物。我身上哪一点让你笑得这样？~
 DO ~SetGlobal("C0SireneDrake1","GLOBAL",1)~
-== BC0Drake ~Nothing in particular, lady Mercy. Are you saying I am the first to find you fascinating?~
-== BC0Siren ~I would prefer not to be to be scrutinized by the very company I keep.~
-== BC0Drake ~That so? My apologies, then, if I have forgotten that you are a living being with thoughts and feelings. I shall be sure to remain discreet from now on.~
-== BC0Siren ~Knowing that brings me no more comfort, Drake. (sigh) But I suppose I cannot stop you.~
+== BC0Drake ~也没什么，仁慈女士。你的意思是，我还是头一个觉得你有趣的人？~
+== BC0Siren ~我不希望被同在一条路上的人这样打量。~
+== BC0Drake ~是吗？那我便赔个不是——若我忘了你也是活人，也有心思和感受。往后我自会收敛些。~
+== BC0Siren ~知道这个，我也没觉得好受多少，德雷克。（叹气）不过我想，我也拦不住你。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -20,17 +20,17 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneDrake1","GLOBAL",1)~ THEN BC0Drake C0SireneDrake2
-~Come now, lady Mercy, is there any cause for such a gloomy face? We're not dying yet.~
+~别这样，仁慈女士，有什么好愁眉苦脸的？我们这不还没死么。~
 DO ~SetGlobal("C0SireneDrake1","GLOBAL",2)~
-== BC0Siren ~Why do you call me that?~
-== BC0Drake ~Do you not find the appellation flattering?~
-== BC0Siren ~Nay, but I hardly find it suitable considering... everything that I have done. There is no mercy in all this slaughter.~
-== BC0Drake ~Ha! True enough, but you are hardly more guilty than any of us.~
-== BC0Siren ~Aye, but 'twould seem that I feel the weight of my actions more greatly than others.~
-== BC0Drake ~I believe most decent men would show remorse for ending the life of another, no matter how vile they may be, but I don't think I've seen anyone carry those feelings around for so long after the deed.~
-== BC0Siren ~Do you find that laughable?~
-== BC0Drake ~No, I actually find it rather admirable. I doubt I would have the strength if I were in your place.~
-== BC0Siren ~...I see. I... thank you, Drake.~
+== BC0Siren ~你为什么这样叫我？~
+== BC0Drake ~你不觉得这称呼挺抬举人吗？~
+== BC0Siren ~不，可想想……我做过的那些事，这称呼实在不相称。这一路杀伐里，哪有什么仁慈。~
+== BC0Drake ~哈！说得也是，可你也不见得比我们谁更有罪。~
+== BC0Siren ~是，只是我似乎比别人更压得慌，压在自己做过的事上。~
+== BC0Drake ~我想，但凡还有点良心的人，夺人性命之后都会悔，不管对方多卑劣；可我还没见过谁像你这样，事过这么久还把这份心思背在身上。~
+== BC0Siren ~你觉得这很好笑？~
+== BC0Drake ~不，我倒觉得挺可敬。换作我，未必撑得住。~
+== BC0Siren ~……我明白了。我……谢谢你，德雷克。~
 EXIT
 
 CHAIN IF ~InParty("C0Drake")
@@ -40,13 +40,13 @@ See("C0Drake")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneDrake1","GLOBAL",2)~ THEN BC0Siren C0SireneDrake3
-~You have a respected place among the Order of the Radiant Heart, Drake, yet you seem anything but satisfied.~
+~德雷克，你在光辉之心骑士团里地位不低，可你看上去一点也不满足。~
 DO ~SetGlobal("C0SireneDrake1","GLOBAL",3)~
-== BC0Drake ~I'm not half as respected as you might think, lady Mercy. Well-liked among the juniors, certainly, but others find my personality... difficult to bear.~
-== BC0Siren ~And why is that?~
-== BC0Drake ~Eh, you get a few disagreements on what's the right thing to do against what we are told is right. I couldn't get used to it.~
-== BC0Siren ~Are you trying to say that the Order is not as noble as it seems?~
-== BC0Drake ~No, they mean well, sure enough, but... we take too much stock into personal honor, sometimes too far. In a land like Amn, honor is... not exactly something that is easy to maintain, while still trying to keep your morals clean.~
-== BC0Siren ~I see...~
-== BC0Drake ~If you knew what I've seen fit to do, truly, then perhaps you'd have a little less respect than you do right now. And I think I'll leave it at that.~
+== BC0Drake ~我可没你想的那么受敬重，仁慈女士。后辈里头人缘是不错，可旁人觉得我这性子……不好相处。~
+== BC0Siren ~为什么？~
+== BC0Drake ~唉，做事该怎么做，和我们被告知该怎么做，总有几处对不上。我怎么都习惯不了。~
+== BC0Siren ~你是想说，骑士团并没有看上去那么高尚？~
+== BC0Drake ~不，他们本意是好的，这我信。只是……我们太看重个人的荣誉，有时候看得过了头。在安姆这样的地方，想保住良心干净，荣誉……可不是那么好守的。~
+== BC0Siren ~我明白了……~
+== BC0Drake ~要是你真知道我做过些什么，也许此刻就不会这么敬重我了。这话我就说到这里。~
 EXIT

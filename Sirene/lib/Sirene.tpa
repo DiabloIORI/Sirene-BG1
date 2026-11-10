@@ -26,45 +26,45 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   UNLESS ~CD_STATE_NOTVALID~
 
 COPY ~%MOD_FOLDER%/creatures/C0Sirene.cre~ ~override/C0Sirene.cre~
-  SAY NAME1 ~Sirene~
-  SAY NAME2 ~Sirene~
+  SAY NAME1 ~塞琳~
+  SAY NAME2 ~塞琳~
   WRITE_ASCII 0x248 ~C0Sirene~ #8  //override script
   WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
   WRITE_ASCII 0x2cc ~C0Sirene~ #8   //pre-joining dialogue file
   WRITE_ASCII 0X34 ~SireneM~ #8   //small portrait
   WRITE_ASCII 0x3c ~SireneL~ #8   //medium portrait
-  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
-  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
-  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
-  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
-  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
-  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
-  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
-  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
-  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
-  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
-  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
-  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
-  SAY DAMAGE ~Ngh!~ [C0SR013]
-  SAY DYING ~Ilmater, take me...~ [C0SR014a]
-  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
-  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
-  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
-  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
-  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
-  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
-  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
-  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
-  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
-  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
-  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
-  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
-  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
-  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
+  SAY BIO ~被问及过往时，塞琳移开目光，淡淡地说没什么可讲。她是个孤儿，襁褓中便被丢下等死，多半是因她显见的魔裔出身而被弃。全凭运气，一位游方的伊尔梅特祭司发现了她，才免于一死；那祭司把她带到同信的人那里，将她抚养为受苦圣战者——献身哭泣之神的圣武士团。她厌恶自己这矛盾的天性，可也说不清自己偏向哪一边。~
+  SAY HAPPY ~你以你的榜样激励我。~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~我不能赞同这样的作为。~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~对你这种人，已剩不下多少仁慈了。~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~我不会再为这邪恶的事业流一滴血。~ [C0SR004]
+  SAY LEADER ~我不配这份荣耀，可既然如此，那就这样吧。我不会辜负你。~ [C0SR005]
+  SAY TIRED ~我怕疲倦时难以行动。我们能歇一歇么？~ [C0SR006]
+  SAY BORED ~我们的时间必有更合适的用处。~ [C0SR007]
+  SAY BATTLE_CRY1 ~我不会动摇！~ [C0SR008]
+  SAY BATTLE_CRY2 ~仁慈的时候已经过了！~ [C0SR009]
+  SAY BATTLE_CRY3 ~恕我不得不做的事！~ [C0SR010]
+  SAY BATTLE_CRY4 ~以伊尔梅特之名！~ [C0SR011a]
+  SAY BATTLE_CRY5 ~为了哭泣之神！~ [C0SR012a]
+  SAY DAMAGE ~呃！~ [C0SR013]
+  SAY DYING ~伊尔梅特，带我走吧……~ [C0SR014a]
+  SAY HURT ~只要我还站着，你休想再伤别人！~ [C0SR015]
+  SAY AREA_FOREST ~森林的宁静总叫我心安。~ [C0SR016]
+  SAY AREA_CITY ~与朋友同行，走街过巷都轻快些。~ [C0SR017]
+  SAY AREA_DUNGEON ~只要我们还留在这危险之地，我就会一直戒备。~ [C0SR018]
+  SAY AREA_DAY ~阳光温暖。少有别的感觉能给我更大的安慰。~ [C0SR019]
+  SAY AREA_NIGHT ~夜气不祥，可是……知道它能遮住我是什么，我倒觉得自在。~ [C0SR020]
+  SAY SELECT_COMMON1 ~我在这儿。~ [C0SR021]
+  SAY SELECT_COMMON2 ~我能帮什么？~ [C0SR022]
+  SAY SELECT_COMMON3 ~准备好，也愿意。~ [C0SR023]
+  SAY SELECT_ACTION1 ~当然。~ [C0SR027]
+  SAY SELECT_ACTION2 ~好。~ [C0SR028]
+  SAY SELECT_ACTION3 ~是，我会。~ [C0SR029]
+  SAY CRITICAL_HIT ~你的审判到了！~[C0SR035]
+  SAY CRITICAL_MISS ~呃！~ [C0SR036]
+  SAY TARGET_IMMUNE ~这是徒劳！~ [C0SR037]
+  SAY INVENTORY_FULL ~我怕我负重过多了。~ [C0SR038]
+  SAY SPELL_DISRUPTED ~我疏忽了。~ [C0SR039]
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
@@ -113,44 +113,44 @@ END
 COPY ~%MOD_FOLDER%/items/C0sw2h.BAM~ ~override~
 COPY ~%MOD_FOLDER%/items/C0csw2h.BAM~ ~override~
 COPY ~%MOD_FOLDER%/Items/C0SW2H.itm~ ~override/C0SW2H.itm~
-SAY NAME1 ~Two-handed Sword~
-SAY NAME2 ~Brimstone +1~
-SAY DESC ~This two-handed sword is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which disorients foes and makes it more difficult to retaliate.
+SAY NAME1 ~双手巨剑~
+SAY NAME2 ~硫磺 +1~
+SAY DESC ~这把双手巨剑摸起来暖，像被晒在日头下，还带一点烟味。它不只是把配重得宜的兵器，每次挥击还会散出一缕灼灰，叫敌人迷失方向，也更难还手。
 
-This weapon can only be wielded by tieflings.
+此武器只有提夫林才能使用。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+战斗能力：
+– 每次命中使对手的THAC0在2轮之内降低1（以喷吐豁免可免）
 
-Equipped abilities:
-– -1 Constitution
-– 20% resistance to fire damage
+装备能力：
+– 体质 -1
+– 火焰伤害抗力 20%
 
-THAC0: +1
-Damage: 1d10+1, 1 fire damage (slashing)
-Speed Factor: 8
-Proficiency Type: Two-handed Sword
-Type: Two-handed
-Requires:
- 14 Strength
+THAC0：+1
+伤害：1d10+1，另加1点火焰伤害（挥砍）
+速度系数：8
+熟练类型：双手巨剑
+类型：双手
+需要：
+ 力量14
 
-Weight: 10~
+重量：10~
 
 COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
-SAY NAME1 ~Darkness, 15' Radius~
-SAY DESC ~Darkness, 15' Radius
-(Alteration)
+SAY NAME1 ~黑暗术，15尺半径~
+SAY DESC ~黑暗术，15尺半径
+（变化系）
 
-Level: 2
-Range: 30 ft.
-Duration: 1 turn
-Casting Time: 2
-Area of Effect: 8-ft. radius
-Saving Throw: None
+等级：2
+射程：30尺
+持续时间：1轮
+施法时间：2
+影响范围：8尺半径
+豁免检定：无
 
-This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+此法术造出全然、穿不透的黑暗。影响范围内，寻常的光与法术的光都不起作用。一切视觉（包括夜视）都严重受限；陷在影响范围内的敌对者，实际上就如同一级法师法术“目盲”所述那般失明。离开黑暗笼罩范围的生物，视觉会在1轮之后恢复。~
 
 // Sirene-Glam
 ACTION_IF MOD_IS_INSTALLED ~SETUP-GLAMNPCPACK.TP2~ ~0~

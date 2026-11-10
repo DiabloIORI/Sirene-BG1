@@ -1,0 +1,209 @@
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneL.bmp~
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneM.bmp~
+COPY ~%MOD_FOLDER%/portraits/Sirene.bmp~ ~override/SireneS.bmp~
+//AUDIO
+
+ACTION_IF NOT GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "BG1_EET_" ""
+OUTER_SPRINT "BG1_EET_IMOEN" ""
+END
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "BG1_EET_" "_"
+OUTER_SPRINT "BG1_EET_IMOEN" "2"
+END
+
+LAF HANDLE_AUDIO END
+
+ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
+INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
+END
+
+EXTEND_TOP ~%Temple%.bcs~ ~%MOD_FOLDER%/Scripts/AR3400.baf~
+
+APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
+  ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+
+COPY ~%MOD_FOLDER%/creatures/C0Sirene.cre~ ~override/C0Sirene.cre~
+  SAY NAME1 ~Sirene~
+  SAY NAME2 ~Sirene~
+  WRITE_ASCII 0x248 ~C0Sirene~ #8  //override script
+  WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
+  WRITE_ASCII 0x2cc ~C0Sirene~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~SireneM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~SireneL~ #8   //medium portrait
+  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
+  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
+  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
+  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
+  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
+  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
+  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
+  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
+  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
+  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
+  SAY DAMAGE ~Ngh!~ [C0SR013]
+  SAY DYING ~Ilmater, take me...~ [C0SR014a]
+  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
+  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
+  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
+  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
+  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
+  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
+  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
+  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
+  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
+  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
+  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
+  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
+  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
+  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
+  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
+  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
+  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
+
+ACTION_FOR_EACH sirene_dlg IN BC0Siren C0Sirene C0SirenJ C0SirenP C0SirenEE BEGIN
+COMPILE EVALUATE_BUFFER	~%MOD_FOLDER%/Dialogue/%sirene_dlg%.d~ 
+END
+
+ACTION_FOR_EACH sirene_bcs IN C0DornF C0Sirene C0SirenD C0reset BEGIN
+COMPILE EVALUATE_BUFFER	~%MOD_FOLDER%/Scripts/%sirene_bcs%.baf~ 
+END
+
+EXTEND_BOTTOM ~DORN_.bcs~ ~%MOD_FOLDER%/scripts/c0dornf.baf~
+
+ACTION_FOR_EACH baldur_script IN baldur bdbaldur baldur25 BEGIN
+ACTION_IF FILE_EXISTS_IN_GAME ~%baldur_script%.bcs~ BEGIN
+EXTEND_TOP ~%baldur_script%.bcs~ ~%MOD_FOLDER%/scripts/reputation.baf~
+END
+END
+
+EXTEND_TOP ~BDINTRO.bcs~ ~%MOD_FOLDER%/scripts/BDINTRO.baf~
+
+ACTION_IF GAME_IS ~EET~ BEGIN
+
+APPEND ~bgdialog.2da~
+~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
+UNLESS ~C0Sirene~
+
+APPEND ~bgbanter.2da~
+~C0Sirene       BC0Siren C0SirenEE~
+UNLESS ~C0Sirene~
+  
+END ELSE BEGIN
+
+APPEND ~pdialog.2da~
+~C0Sirene        C0SirenP	C0SirenJ	C0SirenD~
+UNLESS ~C0Sirene~
+
+APPEND ~interdia.2da~
+~C0Sirene       BC0Siren C0SirenEE~
+UNLESS ~C0Sirene~
+  
+END
+
+COPY ~%MOD_FOLDER%/items/C0sw2h.BAM~ ~override~
+COPY ~%MOD_FOLDER%/items/C0csw2h.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Items/C0SW2H.itm~ ~override/C0SW2H.itm~
+SAY NAME1 ~Two-handed Sword~
+SAY NAME2 ~Brimstone +1~
+SAY DESC ~This two-handed sword is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which disorients foes and makes it more difficult to retaliate.
+
+This weapon can only be wielded by tieflings.
+
+STATISTICS:
+
+Combat abilities:
+– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+
+Equipped abilities:
+– -1 Constitution
+– 20% resistance to fire damage
+
+THAC0: +1
+Damage: 1d10+1, 1 fire damage (slashing)
+Speed Factor: 8
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 10~
+
+COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
+SAY NAME1 ~Darkness, 15' Radius~
+SAY DESC ~Darkness, 15' Radius
+(Alteration)
+
+Level: 2
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 2
+Area of Effect: 8-ft. radius
+Saving Throw: None
+
+This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+
+// Sirene-Glam
+ACTION_IF MOD_IS_INSTALLED ~SETUP-GLAMNPCPACK.TP2~ ~0~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Glam's NPC Pack~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/glamvrock.d~
+END
+
+// Sirene-White
+ACTION_IF FILE_EXISTS_IN_GAME ~V#1WHIB.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and White~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/white.d~
+END
+
+// Sirene-Verr'Sza
+ACTION_IF FILE_EXISTS_IN_GAME ~L#1VerrB.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Verr'Sza~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/verrsza.d~
+END
+
+// Sirene-Drake
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0drake.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Drake~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/drake.d~
+END
+
+// Sirene-Aura
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0aura.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Aura~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/aura.d~
+END
+
+// Sirene-Kale
+ACTION_IF FILE_EXISTS_IN_GAME ~x3kaleb.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Kale~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/kale.d~
+END
+
+// Sirene-Kale
+ACTION_IF FILE_EXISTS_IN_GAME ~x3helgab.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Helga~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/helga.d~
+END
+
+// Sirene-Vienxay
+ACTION_IF FILE_EXISTS_IN_GAME ~x3vienb.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Skitia's Vienxay~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/vienxay.d~
+END

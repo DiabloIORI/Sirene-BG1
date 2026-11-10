@@ -29,36 +29,36 @@ LAF ADD_KIT_EX
 	
 	visible = 0
 	
-    mixed         = RESOLVE_STR_REF(~Martyr~)
+    mixed         = RESOLVE_STR_REF(~受难者~)
 	
     lower         = RESOLVE_STR_REF(~martyr~)
 	
-    help          = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
+    help          = RESOLVE_STR_REF(~受难者：受难者是伊尔梅特的敬拜者——那位受苦、忍耐与坚忍的善神。伊尔梅特教派的圣武士心怀悲悯，操练自己成为同伴的护者，并减轻他人的苦。
 
-Advantages:
-– May use Lay on Hands three times per day.
-– 10% resistance to crushing, slashing, piercing, and missile damage. Gains an additional 5% every 5 levels to a maximum of 30% at level 20.
-– May use the Sacrifice ability once per day. Gains an additional use at 5th level and every 5 levels thereafter.
+优势：
+– 每日可用“按手治疗”三次。
+– 对钝击、挥砍、穿刺与远程伤害有10%抗力。每5级再增5%，20级时最高30%。
+– 每日可用“牺牲”能力一次。5级时多一次，此后每5级再增一次。
 
-SACRIFICE: The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.
+牺牲：受难者把10点生命值加上每级2点转移给目标，20级时最多50点。受难者不会因这次牺牲而死——若其生命值将降到1以下，则改为陷入昏迷。
 
-– May use the Martyrdom ability once per day starting at level 5. Gains an additional use at 10th level and every 10 levels thereafter.
+– 5级起每日可用“殉道”能力一次。10级时多一次，此后每10级再增一次。
 
-MARTYRDOM: The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.
+殉道：受难者摆出守势以护同伴。一轮之内，受难者的生命值上限临时翻倍，护甲等级+4，对一切伤害的抗力+20%，并对一切位移效果免疫。此守势下受难者的伤害与移动速度减半，但其有效占据的身位大幅增加，能阻止生物从5尺半径内穿过。时限结束时，受难者极度疲乏。此能力不可与“坚忍”并用。
 
-– 10th level: The martyr becomes immune to fatigue.
-– 15th level: May use the Ilmater's Grace ability once per day.
+– 10级：受难者对疲乏免疫。
+– 15级：每日可用“伊尔梅特之恩”能力一次。
 
-ILMATER'S GRACE: The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.
+伊尔梅特之恩：受难者可在战斗中唤来第二口气，瞬间回复其一半生命值上限。其后五轮内，受难者再缓缓回复其一半生命值上限。
 
-– Hit Die: d12
+– 生命骰：d12
 
-Disadvantages:
-– May not cast Protection from Evil.
-– May not Turn Undead.
-– May not use ranged weapons.~)
+劣势：
+– 不能施放“防护邪恶”。
+– 不能斥退不死生物。
+– 不能使用远程武器。~)
 	
-    briefdesc     = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.~)
+    briefdesc     = RESOLVE_STR_REF(~受难者：受难者是伊尔梅特的敬拜者——那位受苦、忍耐与坚忍的善神。伊尔梅特教派的圣武士心怀悲悯，操练自己成为同伴的护者，并减轻他人的苦。~)
 	
 	// fallen = 1
 	
@@ -178,10 +178,10 @@ COPY_EXISTING ~splprot.2da~ ~override~
 	
 	
 COPY_EXISTING ~c0ilms1.spl~ ~override~
-SAY NAME1 ~Sacrifice~
-SAY NAME2 ~Sacrifice~
-SAY UNIDENTIFIED_DESC ~Sacrifice
-The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.~
+SAY NAME1 ~牺牲~
+SAY NAME2 ~牺牲~
+SAY UNIDENTIFIED_DESC ~牺牲
+受难者把10点生命值加上每级2点转移给目标，20级时最多50点。受难者不会因这次牺牲而死——若其生命值将降到1以下，则改为陷入昏迷。~
 
 COPY_EXISTING ~c0ilms1a.spl~ ~override~
 	
@@ -191,10 +191,10 @@ COPY_EXISTING ~C0ilms2.spl~ ~override~
       match_opcode = 142
 	  parameter2 = c0sirs2i
 END
-SAY NAME1 ~Martyrdom~
-SAY NAME2 ~Martyrdom~
-SAY UNIDENTIFIED_DESC ~Martyrdom
-The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.~
+SAY NAME1 ~殉道~
+SAY NAME2 ~殉道~
+SAY UNIDENTIFIED_DESC ~殉道
+受难者摆出守势以护同伴。一轮之内，受难者的生命值上限临时翻倍，护甲等级+4，对一切伤害的抗力+20%，并对一切位移效果免疫。此守势下受难者的伤害与移动速度减半，但其有效占据的身位大幅增加，能阻止生物从5尺半径内穿过。时限结束时，受难者极度疲乏。此能力不可与“坚忍”并用。~
 
 COPY_EXISTING ~C0ilms3.spl~ ~override~
   LPF ALTER_EFFECT
@@ -202,7 +202,7 @@ COPY_EXISTING ~C0ilms3.spl~ ~override~
       match_opcode = 139
 	  parameter1 = RESOLVE_STR_REF (~Regenerating~)
 END
-SAY NAME1 ~Ilmater's Grace~
-SAY NAME2 ~Ilmater's Grace~
-SAY UNIDENTIFIED_DESC ~Ilmater's Grace
-The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.~
+SAY NAME1 ~伊尔梅特之恩~
+SAY NAME2 ~伊尔梅特之恩~
+SAY UNIDENTIFIED_DESC ~伊尔梅特之恩
+受难者可在战斗中唤来第二口气，瞬间回复其一半生命值上限。其后五轮内，受难者再缓缓回复其一半生命值上限。~

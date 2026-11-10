@@ -5,15 +5,15 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#DaveBanter1","GLOBAL",0)~ THEN BGV#DAVE SIRENE-DAVE-1
-~Ah, Sirene. I have to admit, it makes me sad to look at you. All I can see is one big missed opportunity.~
+~啊，塞琳。我得承认，看着你总叫我心里发闷。在我眼里，你就是一个大大的错失良机。~
 DO ~SetGlobal("C0SireneGV#DaveBanter1","GLOBAL",1)~
-== BC0SIREN ~Missed by whom?~
-== BGV#DAVE ~By the Talassans! If we’d been the ones to take you in…well. Let’s just say a lot of our best priests were bullied as children.~
-== BC0SIREN ~Then Ilmater has blessed me twice over, to save me from such a hateful upbringing.~
-== BGV#DAVE ~Oh please. I can’t speak for every church, but ours puts a firm emphasis on directing hate outwards, not in.~
-== BGV#DAVE ~Just imagine it. One big rambunctious family, where fiendish blood is a point of pride. Would that really have been so terrible for you?~
-== BC0SIREN ~A family that teaches me to relish violence and cruelty? To silence my heart? Aye, I can think of nothing worse.~
-== BGV#DAVE ~Uggh. You’re in deep, aren’t you? Tiefling my foot. I might as well be talking to a planetar.~
+== BC0SIREN ~谁错失了？~
+== BGV#DAVE ~塔洛斯信徒啊！要是当初是我们把你收养了……唉。这么说吧，我们最出色的那些牧师，小时候大多都被人欺侮过。~
+== BC0SIREN ~那伊尔梅特倒算是加倍保佑了我，把我从那样可憎的教养里救了出来。~
+== BGV#DAVE ~哦，得了吧。别家的教会我不说，我们这一家可是明明白白教人：恨要往外使，别往里收。~
+== BGV#DAVE ~你就想想看。一个热热闹闹的大家庭，魔裔的血在那儿是件得意事。那样的日子对你真有那么糟？~
+== BC0SIREN ~一个教我以暴虐为乐、教我闭起心肠的家？是，我想不出还有什么更糟的。~
+== BGV#DAVE ~唉哟。你陷得可真深，是不是？还说什么提夫林。我跟你说话，简直像在跟一位天人讲。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -23,14 +23,14 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#DaveBanter2","GLOBAL",0)~ THEN BGV#DAVE SIRENE-DAVE-2
-~Sirene, have you ever had thoughts that this doctrine of altruism is self-defeating?~
+~塞琳，你有没有想过，这套利他的教义其实是自拆台脚？~
 DO ~SetGlobal("C0SireneGV#DaveBanter2","GLOBAL",1)~
-== BGV#DAVE ~Let’s say you have a bowl of grain, and you give it to someone who “needs it more than you.” Then I come along and see you, and I think “Oh, that poor girl has nothing to eat. I’ll give her my bowl of grain, because that’s the right thing to do.”~
-== BGV#DAVE ~So now you have a bowl of grain. Which you, uh, give to someone else, thereby defeating the whole point of my act, and someone else has to give me their bowl because now I don’t have one…do you see the problem here? It’s a snake devouring its own tail.~
-== BC0SIREN ~And yet in truth, you would not offer me your bowl, nor would I refuse to eat from it. This tale exists only in your imagining, Dave. You know well that I do not starve myself, and a good deed is as likely to end at its beneficiary as it is to run around the world. I give what I can, when I can. Let it stand on its own merits.~
-== BGV#DAVE ~Ah, but you’ve changed the subject. A few handouts given as and when is one thing, but the Martyrdom is a way of life. One you’re trying to perpetuate.~
-== BGV#DAVE ~Like I said, it’s the doctrine that foils itself. If you never stop to think about your own needs, other people have to do it for you, and it ends with everyone trying to carry each other instead of just walking.~
-== BC0SIREN ~The day that everyone on Toril is willing to carry their fellow man is the day that Ilmater will finally rest, for his work will be done. Until then, I and my brethren shall lead by example.~
+== BGV#DAVE ~比方你有一碗谷子，你把它给了一个“比你更需要”的人。然后我来了，看见你，心里想：“哦，这可怜的姑娘什么也没得吃，我把这碗谷子给她吧，这才是该做的事。”~
+== BGV#DAVE ~于是你手上又有了一碗谷子。你又把它，呃，给了别人，我那一番好意就此全废；于是又得有人把自己的那碗给我，因为如今我没得吃了……你看出问题了吗？这是条蛇在吞自己的尾巴。~
+== BC0SIREN ~可实际上，你不会把碗给我，我也不会不肯吃。这番推演只存在你脑子里，戴夫。你清楚，我不会让自己挨饿；一桩善举，既可能止于受惠的人，也可能一路绕遍世界。能给的时候，能给多少，我就给多少。让它凭本身站住脚吧。~
+== BGV#DAVE ~啊，可你把话岔开了。偶尔施几回，是一回事；而“受难”是一种活法，一种你想让它传下去的活法。~
+== BGV#DAVE ~我说过了，这套教义是自己拆自己的。你若从不回头想一想自己的需要，就只好由别人替你想；最后人人都忙着背别人，没人还能走路。~
+== BC0SIREN ~等到托瑞尔上人人都肯背起身边的人那天，伊尔梅特才终于能歇下，因为他的事做完了。在那之前，我和我的同道，就以身作则。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -40,14 +40,14 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#FlaraBanter1","GLOBAL",0)~ THEN BGV#FLAR SIRENE-FLARA-1
-~A creature borne of hell to serve heaven. How unbearably bardic. Many find you quite the oxymoron, tiefling, but I can fathom your motives well enough.~
+~地狱生出的东西，却去侍奉天堂。真是受不了的诗人腔。提夫林，许多人都说你是个现成的矛盾，可你的心思我还能摸得明白。~
 DO ~SetGlobal("C0SireneGV#FlaraBanter1","GLOBAL",1)~
-== BC0SIREN ~You believe you understand Ilmater’s teachings? A claim that rings false in your treatment of others.~
-== BGV#FLAR ~I will never purport to understand the lunacy of charity, any more than the gibberings of a mouther, but *you* I understand perfectly well.~
-== BGV#FLAR ~Those who torment you for your dark birth, who spit at you and throw stones…if ever you chose to draw your blade and give them what they truly deserved, they’d truss you to a pyre. A glimmer of catharsis, all to end in ashes. But this way you can show them, can’t you? With patience as your weapon, you show them all the folly of their prejudice and bask in vindication. It’s a poor man’s revenge, and how very fitting that is.~
-== BC0SIREN ~...~
-== BC0SIREN ~There was a time your words would have held a measure of truth, but it may as well have been an age ago. My pride was unmade in Ilmater’s forgiveness. That angry, wilful girl is no more.~
-== BGV#FLAR ~You are well indoctrinated indeed, if you would speak of pride as something to forgive. Turn away now, swordmeat, and bear a blow or two for me. Such is your raison d'être, I believe.~
+== BC0SIREN ~你自认懂得了伊尔梅特的教诲？这话从你待人的样子来看，就不像真的。~
+== BGV#FLAR ~我从不声称看得懂那份慈善的疯癫，正如听不懂狂乱者嘴里咕哝，可你——你我倒看得透透的。~
+== BGV#FLAR ~那些因你出身阴暗就折腾你的人，朝你吐口水、扔石头的人……你哪天真要拔剑，给他们应得的下场，他们就会把你绑上火堆。片刻痛快，终归灰烬。可如今这条路，你就能让他们看个明白，对吧？以忍耐为兵器，让他们看见自己偏见之愚，自己则立于证实之中。这是穷人的复仇，还配得恰到好处。~
+== BC0SIREN ~……~
+== BC0SIREN ~有过一阵子，你的话还能算有几分真，可那已是许久许久以前的事了。我的骄矜，在伊尔梅特的宽恕里散去了。那个好怒任性的姑娘，已经不在了。~
+== BGV#FLAR ~你确实被教得极好——竟把骄矜也说成该被宽恕之物。滚开吧，剑下肉，替我挨上一两下。你的用处，我看就在这里。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -57,15 +57,15 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#LittlunBanter1","GLOBAL",0)~ THEN BGV#LITT SIRENE-LITTLUN-1
-~The way people look at you sometimes, Sirene…it’s three feet too high to be aimed at me and I still want to slap it off their nosy faces. How do you put up with that rubbish?~
+~塞琳，别人看你的那种眼神……那比对着我还要高出三尺，可我还是想一巴掌把它从他们多事的脸上拍下去。这种乱七八糟的事，你怎么受得住？~
 DO ~SetGlobal("C0SireneGV#LittlunBanter1","GLOBAL",1)~
-== BC0SIREN ~I remind myself of what the alternatives would bring. If I may say so, you yourself can be no stranger to the feeling that you don’t quite belong. To lash out at every maligner will naught but drain you.~
-== BGV#LITT ~Heh. It’s strange to say it, but my tribe wouldn’t give half a damn about the devil in you. They’d treat you just like everyone else, which is to say they’d turn you out on your arse if you came anywhere near ‘em. Humans, dwarves, tieflings, they all get the same.~
-== BC0SIREN ~‘Tis equity, at least, if not acceptance. Though I would gladly bear their revulsion if it meant they would open their hearts to others again.~
-== BGV#LITT ~Ah, that’s a long time coming, I reckon. A lot of old wounds still to close. You can scarcely call it history when there’s those still alive who remember.~
-== BGV#LITT ~Me, though, I go by my own experiences. I know one tiefling, and she’s a good person, so that’s one in one. Better odds than I can give anyone else.~
-== BC0SIREN ~I…fear you’ll find that’s not always the case, Littlun. Though it pains me to say so, many of my kind are exactly what their appearance would suggest.~
-== BGV#LITT ~Ah-ah-ah. You let me discover that for myself. If it’s a mistake, it’s mine to make, and I’ll learn from it.~
+== BC0SIREN ~我就想想别的路会带来什么。若容我说一句，你自己也未必陌生那种格格不入的感觉。对每个恶语相向的人都还以颜色，只会把人耗干。~
+== BGV#LITT ~嘿。说来也怪，我族人倒半点不介意你身上那点魔气。他们会待你同旁人一样——也就是说，你要是敢靠近他们，照样把你撵出去。人类、矮人、提夫林，一视同仁。~
+== BC0SIREN ~这至少算公匀，虽谈不上接纳。只是若能换来他们重新向别人敞开心，我倒情愿受他们的厌恶。~
+== BGV#LITT ~唉，那还早得很呢，我料着。还有好些旧伤没合上。只要还有活人记得，这事就还称不上过去。~
+== BGV#LITT ~不过我自己，就照自己的经历来。我只认得一个提夫林，她是个好人，那便是一个里有一个。这赔率比我能给旁人的都好。~
+== BC0SIREN ~我……只怕未必总是如此，利特伦。虽然说出来心里难受，可我这类人里，不少确实就像他们外表那样。~
+== BGV#LITT ~啊——啊——啊。这你就让我自己去发现。若是个错，那错也是我自己犯的，我会从里头学。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -76,14 +76,14 @@ CombatCounter(0)
 !See([ENEMY])
 HPPercentLT("C0Sirene",50)
 Global("C0SireneGV#LittlunBanter2","GLOBAL",0)~ THEN BGV#LITT SIRENE-LITTLUN-2
-~Flamin’ hell, Sirene. If you ain’t gonna heal yourself, at least let me have a look at you. You see all this red stuff? That’s called blood, and it’s meant to be on the inside.~
+~见鬼，塞琳。你既然不肯给自己治，起码让我看看你。你瞧见这些红的东西吗？这叫血，本来该在里头的。~
 DO ~SetGlobal("C0SireneGV#LittlunBanter2","GLOBAL",1)~
-== BC0SIREN ~Haha...ah, I would ask that you don’t make me laugh at present. ‘Tis a bearable ache otherwise.~
-== BGV#LITT ~You won’t be laughing when these bandages are going on, I promise you. This’ll have to be a tight wrap.~
-== BGV#LITT ~You need to look after yourself better, you know that? Whatever noble end Your Holiness is working towards, you can’t see it through if you’re dead.~
-== BC0SIREN ~I am not so easily felled, my friend. My wounds seem severe to you, I am sure, but I’ve spent many a year training to endure such pains. They pass, always.~
-== BGV#LITT ~I don’t care how long you trained. There’s only so much a person can take, and it ain’t a sin to know when’s enough. You don’t have to suffer alone all the time.~
-== BC0SIREN ~Your concern is welcome, Littlun, truly. But from the moment I embraced Ilmater, I have never suffered alone.~
+== BC0SIREN ~哈哈……啊，这会儿请你别逗我笑。不然就只剩一阵能忍的疼了。~
+== BGV#LITT ~等裹上这绷带，你可就笑不出来了，我跟你保证。这一裹得裹紧。~
+== BGV#LITT ~你得把自己照顾得好些，知道吗？不管圣座您在奔什么高尚的结局，人死了，那也是看不到的。~
+== BC0SIREN ~我还没那么容易倒下，我的朋友。我的伤在你看来当然重，可我费了许多年工夫，练的就是忍这种痛。它们总会过去的。~
+== BGV#LITT ~你练了多久我不管。一个人能受的到底有限，知道何时算够，这不算罪过。你不必老是独自受着。~
+== BC0SIREN ~你的关心我领了，利特伦，真的。可自从我皈依伊尔梅特，我就从没独自受过。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -93,15 +93,15 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#MoidreBanter1","GLOBAL",0)~ THEN BGV#MOID SIRENE-MOIDRE-1
-~Haven’t got much to say about your god, Sirene, but seems his followers could do with some combat lessons.~
+~你那位神，我没什么可说的，塞琳。不过看来他的信徒该补补战技课。~
 DO ~SetGlobal("C0SireneGV#MoidreBanter1","GLOBAL",1)~
-== BC0SIREN ~You find flaw in my technique, then?~
-== BGV#MOID ~Technique, no. Choice of armaments, yes. If your business is taking someone else’s licks, use a shield, not your body. It’ll hold longer.~
-== BC0SIREN ~I’m well aware of the function of a shield, Moidre. Surely you don’t think me so foolish. I fight as I do because Ilmater would not have me shy away from harm.~
-== BGV#MOID ~Fine. Make the gesture. Prove your fearlessness and devotion, or whatever he wants to see in you. Then what? Your lung takes a spear your shield would’ve blocked. You catch an arrow in the wrong place, not that there’s a right one. You die honourably. But your ward doesn’t. They die running, begging for someone to protect them, and you can’t answer.~
-== BGV#MOID ~What’s more important? The gesture, or the outcome?~
-== BC0SIREN ~Both are important. You were taught to use more pragmatic methods, and I understand this, but...forgive my rudeness...you are not a paladin. It is for precisely such gestures that Ilmater grants me his strength. Without them, without him, I am merely...~
-== BGV#MOID ~Another grunt. Fair enough. Can’t fault anyone for not wanting to be me.~
+== BC0SIREN ~那你是觉得我技法有差？~
+== BGV#MOID ~技法不差。挑的兵器差。你既然干的是替人挨打的活，就用盾，别拿身子。盾撑得久。~
+== BC0SIREN ~盾有什么用，我清楚得很，莫伊德尔。你该不致当我蠢到那步。我这样打，是因为伊尔梅特不愿我避害。~
+== BGV#MOID ~好。那就做个姿态。证明你的无畏与虔诚，或者证明他想在你身上看到的什么。然后呢？你的肺挨了一枪，那一枪有盾就挡得住。你中了一箭，部位不对——虽说也没有对的部位。你死得光荣。可你护着的人没有。他们死在逃跑的路上，求人护他们，而你答不上话。~
+== BGV#MOID ~哪个更要紧？姿态，还是结果？~
+== BC0SIREN ~两样都要紧。你受的教是要用更务实的手段，这我明白，只是……恕我冒犯……你不是圣武士。正是为着这样的姿态，伊尔梅特才把他的力量赐我。没有这些姿态，没有他，我不过是……~
+== BGV#MOID ~又一个兵卒。也罢。怪不得谁不想当我这样的人。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -111,16 +111,16 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#VyndBanter1","GLOBAL",0)~ THEN BGV#VYND SIRENE-VYND-1
-~Gods. As if Drizzt wasn’t bad enough, now we’ve got half-demon paladins running around. Or quarter-demon. Whatever it is. Can’t anyone just play by the rules these days?~
+~神明在上。崔斯特一个还不够糟，如今满世界跑的都是半魔圣武士。也许四分之一魔。管它几分。这年头就没人肯按规矩来了么？~
 DO ~SetGlobal("C0SireneGV#VyndBanter1","GLOBAL",1)~
-== BC0SIREN ~Our paths are not laid by our heritage, and you know this as well as I. You would not be here otherwise.~
-== BGV#VYND ~Oh, be a good little Ilmatari and spare me the agony of apprentice philosophy. This isn’t about fate versus free will. This about you muddying people’s perceptions, making things complicated for everyone else. Do you realise how annoying you must be to all the tieflings trying to make an honest living as blood-quaffing warlocks?~
-== BC0SIREN ~If my example gives them even a moment’s pause then I have done more than I could have hoped.~
-== BGV#VYND ~Yeah, so where was your moment’s pause? Did you ever think, just for an instant, that those people might be having more fun than you?~
-== BC0SIREN ~Where does your intent lie, Vynd? You would have me cast aside everything I’ve learned, conform to what the mob believes I should be, in order to...do what? Prevent confusion? What exactly is your grievance here? Or are you simply being argumentative for the sake of it?~
-== BGV#VYND ~Yes.~
-== BC0SIREN ~...~
-== BGV#VYND ~And you’re duty-bound to put up with it. Get ready for a long trip.~
+== BC0SIREN ~我们的路不是出身铺的，这你和我一样清楚。否则你不会在此。~
+== BGV#VYND ~哦，就做个乖乖的伊尔梅特信徒，别拿学徒级的哲理来折磨我。这跟命数与自由意志无关。这是你把旁人的观感搅浑，让所有人都不好办。你可知道自己多讨人嫌——对那些本本分分靠吸血压榨过活的提夫林术士来说？~
+== BC0SIREN ~若我的例子能让他们哪怕迟疑一刻，那我就做到的比我希望的还多。~
+== BGV#VYND ~是啊，那你那一刻的迟疑又在哪儿？你就没有一瞬想过，那些人也许比你活得更乐？~
+== BC0SIREN ~维恩德，你的意在何处？你要我把学过的一切都丢开，照着众人以为我该是的模样去就范，然后好去……做什么？免得有人糊涂？你究竟在怨哪一桩？还是只为了争而争？~
+== BGV#VYND ~是。~
+== BC0SIREN ~……~
+== BGV#VYND ~而你还有义务忍着。准备好走长路吧。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene")
@@ -130,13 +130,13 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneGV#VyndBanter2","GLOBAL",0)~ THEN BGV#VYND SIRENE-VYND-2
-~Ilmater. That’s a god with more followers than you’d expect. It’s amazing how often I cross paths with your type. Must be because you’re always on the road, since owning a house would get you excommunicated.~
+~伊尔梅特。这位神的信徒比你想的多。我跟你这种人打照面的次数多得惊人。想来是因为你们总在路上——毕竟置了房产，就要被逐出教门。~
 DO ~SetGlobal("C0SireneGV#VyndBanter2","GLOBAL",1)~
-== BC0SIREN ~Or perhaps it is because selflessness is neither as rare nor as scornworthy as you would claim.~
-== BGV#VYND ~Pfft. If it makes you feel special, handing everything you earned to people who didn’t, that’s your business. It’s this obsession with misery that trips me up. The only other god I know that demands her followers suffer is Lolth, and at least she revels in being a pointless, idiotic monster.~
-== BC0SIREN ~You compare the Broken God to the Spider Queen? I would take offence if I thought you believed yourself.~
-== BC0SIREN ~Those who have taken the cloth will tell you the same as I. The pain we bear in Ilmater’s name is a teacher. A teacher of humility, of perseverance, and of empathy for those who bear such burdens without ever having chosen-~
-== BGV#VYND ~Stick your sermons where your tail grows, tiefling. Or would, if you had one. By the time I was taller than my sword, I already knew more about pain than you’ll ever learn in your life. I’ll bet you all the moths in your coinpurse.~
-== BGV#VYND ~So answer me this, oh martyred one. If suffering is so virtuous, so edifying, then how’d I end up as a five foot cocktail of everything you hate in the world?~
-== BC0SIREN ~Hate? Is that what you think I feel? If you had but listened, you would know how wrong you are. I am sorrowful for those his mercy could not reach, and I grieve for the man in you who died without it. That is all.~
+== BC0SIREN ~也或许是因为无私既不那么罕见，也不那么可鄙，如你所言。~
+== BGV#VYND ~嗤。若这让你觉得自己特别，把挣来的一切送给没挣的人，随你。真正绊着我的是这份对苦的痴迷。我认得的另一位要信徒受苦的神是罗丝，可她至少还乐得当个无谓又蠢笨的怪物。~
+== BC0SIREN ~你把破碎之神比作蜘蛛之后？若我信你是真心，我便要动怒了。~
+== BC0SIREN ~披了这身袍的人，会跟你说同样的话。我们以伊尔梅特之名承受的苦，是位老师。教人谦卑，教人持守，也教人对那些背负同样重担、却从没选择过的人心生体恤——~
+== BGV#VYND ~把你的说教塞回你尾巴长的地方，提夫林。要是你有尾巴的话。等我比我的剑还高的时候，我就已经比你一辈子能学到的更懂痛了。我拿你钱袋里所有的蛀虫跟你赌。~
+== BGV#VYND ~那就答我这一句，哦受难者。若受苦真那么有德、那么能教化人心，那我怎么长成了这么个五尺高的东西——你在这世上所恨的一切调成的酒？~
+== BC0SIREN ~恨？你以为我心里是这个？你若肯听，就会知道自己错得多厉害。我为那些他的慈悲够不到的人伤怀，也为那里面那个没等到慈悲就死掉的人哀悼。仅此而已。~
 EXIT

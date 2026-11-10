@@ -1,0 +1,208 @@
+COPY ~%MOD_FOLDER%/Paladin/Martyr/2DA~ ~OVERRIDE~
+COPY ~%MOD_FOLDER%/Paladin/Martyr/spells~ ~OVERRIDE~
+
+// Martyr
+LAF ADD_KIT_EX
+  INT_VAR
+    // Mage	= 1
+	// Fighter = 2
+	// Cleric = 3
+	// Thief = 4
+	// Bard = 5
+	// Paladin = 6
+	// Fighter/Mage = 7
+	// Fighter/Cleric = 8
+	// Fighter/Thief = 9
+	// Fighter/Mage/Thief = 10
+	// Druid = 11
+	// Ranger = 12
+	// Mage/Thief = 13
+	// Cleric/Mage = 14
+	// Cleric/Thief = 15
+	// Fighter/Druid = 16
+	// Fighter/Mage/Cleric = 17
+	// Cleric/Ranger = 18
+	// Sorcerer = 19
+	// Monk = 20
+	// Shaman = 21
+    kit_class     = 6
+	
+	visible = 0
+	
+    mixed         = RESOLVE_STR_REF(~Martyr~)
+	
+    lower         = RESOLVE_STR_REF(~martyr~)
+	
+    help          = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.
+
+Advantages:
+– May use Lay on Hands three times per day.
+– 10% resistance to crushing, slashing, piercing, and missile damage. Gains an additional 5% every 5 levels to a maximum of 30% at level 20.
+– May use the Sacrifice ability once per day. Gains an additional use at 5th level and every 5 levels thereafter.
+
+SACRIFICE: The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.
+
+– May use the Martyrdom ability once per day starting at level 5. Gains an additional use at 10th level and every 10 levels thereafter.
+
+MARTYRDOM: The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.
+
+– 10th level: The martyr becomes immune to fatigue.
+– 15th level: May use the Ilmater's Grace ability once per day.
+
+ILMATER'S GRACE: The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.
+
+– Hit Die: d12
+
+Disadvantages:
+– May not cast Protection from Evil.
+– May not Turn Undead.
+– May not use ranged weapons.~)
+	
+    briefdesc     = RESOLVE_STR_REF(~MARTYR: Martyrs are worshippers of Ilmater, the good god of suffering, endurance and perseverance. Paladins of Ilmater's order are compassionate and train themselves to become protectors of their allies and to alleviate the suffering of others.~)
+	
+	// fallen = 1
+	
+  STR_VAR
+    kit_name      = ~C0ILM~
+	
+    unusable      = ~0x00000008~
+    // clasweap      = ~1 1 1 1 1 1 1 1~
+	//                                       T   S           F   Q             S S
+	//                                       W   C           L   U             W I
+	//                               B L S   O   I   W       A   A             O N
+	//                               A O H   H   M   A       I   R C   S       R G
+	//               L S           M S N O   A   I   R     H L   T R L H     2 D L 2
+	//               _ _       S   I T G R   N K T D H     A M   E O O O     H A E W
+	//               S S   S B P   S A S T   D A A A A   S L O   R S N R   S A N W E
+	//               W W   P L I   S R W S   E T R G M C P B R M S S G T D L N D E A
+	//               O O B E U K A I D O W A D A W G M L E E N A T B B B A I D S A P
+	//               R R O A N E X L S R O X S N A E E U A R I C A O O O R N E H P O
+	//               D D W R T D E E W D R E W A K R R B R D N E F W W W T G D I O N
+    weapprof      = ~2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 2 2 2 3~
+	
+    // abclasrq      = ~0 15 0 14 0 0~
+	
+    // abclsmod      = ~0 0 0 0 0 0~
+	
+    // abdcdsrq      = ~0 0 0 = 0 =~
+	
+    // abdcscrq      = ~15 0 0 0 0 0~
+	
+	//               L L L N N N C C C
+	//               G N E G N E G N E
+    // alignmnt      = ~0 1 1 0 1 1 0 1 1~
+	
+    // dualclas      = ~0 1 1 1 1 0~
+	
+    // luabbr        = ~FI0~
+	
+    // stweap        = ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN4,2 POTN14,5 HAM07 SW1H27 STAF08~
+	
+    clab_path     = ~override/C0ILMCL.2da~
+	
+    // kittable      = ~K_F_H K_F_E K_F_HE~
+	
+	// base_class = 
+	
+	// clab_base_f = 
+	
+	// clab_base_p = 
+	
+	// clab_base_d = 
+	
+	// clab_base_r = 
+	
+	// clab_base_m = 
+	
+	// clab_base_t = 
+	
+    // clsrcreq      = ~1 1 1 1 1 1 1~
+	
+    // clswpbon      = ~1 0 2~
+	
+    hpclass       = ~HPBARB~
+	
+    // numwslot      = ~4~
+	
+    // clascolr = ~27 136 119 21 187~
+	
+	// clasiskl = ~0 0 0 0 0 0 0~
+	
+	// clasthac = ~0~
+	
+	// thiefscl = ~0 0 0 0 0 0 0 0~
+	
+	// backstab = ~2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4~
+	
+	// sneakatt = ~2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4~
+	
+	// crippstr = ~0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 4 4 4 4 4 4 4~
+	
+	// thiefskl = ~0 0~
+	
+	// traplimt = ~6~
+	
+    // bdstweap      = ~CHAN04 SHLD04 HELM01 * RING06 * * * * BRAC09 BELT02 AROW02,40 BULL02,40 BOLT02,40 POTN08,5 POTN17,3 POTN12,1 * SW1H05 HAMM02~
+  RET
+    kit_id
+END
+
+DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+  BEGIN
+
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
+
+END
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Martyrdom~) STR_VAR bam_file = c0sirs2i RET c0sirs2i = icon END
+
+// CURRENT HP CHECK
+APPEND ~splprot.2da~ ~C0CURHP%TAB%0%TAB%-1%TAB%0~
+COPY_EXISTING ~splprot.2da~ ~override~
+	COUNT_2DA_COLS cols // amount of columns
+	READ_2DA_ENTRIES_NOW rows cols // read all file into memory  
+	FOR (row = 1; row < rows; ++row) BEGIN // iterate over rows
+	  READ_2DA_ENTRY_FORMER rows row 0 ~stat~ // read column value
+	  PATCH_IF ~%stat%~ STRING_EQUAL_CASE ~C0CURHP~ BEGIN
+	    SET C0CURHP = %row%
+	  END
+	END
+	
+	
+COPY_EXISTING ~c0ilms1.spl~ ~override~
+SAY NAME1 ~Sacrifice~
+SAY NAME2 ~Sacrifice~
+SAY UNIDENTIFIED_DESC ~Sacrifice
+The martyr transfers 10 hit points plus 2 per level to the target, up to a maximum of 50 hit points at 20th level. The martyr cannot be killed by the sacrifice—if their hit points would go below 1, they are knocked unconscious instead.~
+
+COPY_EXISTING ~c0ilms1a.spl~ ~override~
+	
+COPY_EXISTING ~C0ilms2.spl~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 142
+	  parameter2 = c0sirs2i
+END
+SAY NAME1 ~Martyrdom~
+SAY NAME2 ~Martyrdom~
+SAY UNIDENTIFIED_DESC ~Martyrdom
+The martyr takes on a defensive stance to protect their comrades. For one turn, the martyr temporarily doubles their maximum hit points, gains +4 to Armor Class, +20% resistance to all damage and immunity to all displacement effects. The martyr's damage and movement rate are halved while in this stance, but their effective personal space is greatly increased, preventing creatures from passing them in a 5-ft. radius. At the end of the duration, the martyr is greatly fatigued. This ability may not be used in conjuction with Hardiness.~
+
+COPY_EXISTING ~C0ilms3.spl~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 139
+	  parameter1 = RESOLVE_STR_REF (~Regenerating~)
+END
+SAY NAME1 ~Ilmater's Grace~
+SAY NAME2 ~Ilmater's Grace~
+SAY UNIDENTIFIED_DESC ~Ilmater's Grace
+The martyr may call upon a second wind in battle, instantly healing half of their maximum hit points. The martyr gradually regenerates an additional half of their maximum hit points over the next five rounds.~

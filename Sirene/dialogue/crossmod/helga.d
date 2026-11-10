@@ -5,10 +5,10 @@ See("C0Sirene")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneX3Helga1","GLOBAL",0)~ THEN X3HelgaB SireneHelga1
-~I see a strong warrior in ye, Ilmatari. With a little fury, ye'll make an even greater mark on the battlefield.~
+~我在你身上看见一位强悍的战士，伊尔梅特信徒。添上几分烈怒，你在战场上会立下更大的名号。~
 DO ~SetGlobal("C0SireneX3Kale1","GLOBAL",1)~
-== BC0Siren ~Fury is... not a weapon I have wielded in pride. I choose not to resort to it, when possible.~
-== X3HelgaB ~Ye be not that naive, methinks. Evil must be struck down, and it be done by the sword, not the shield.~
-== BC0Siren ~I fight to protect. To strike down the wicked, the evil... that is a task many others are eager to take. I have seen too many innocents fall, their voices unheard. It is for them that I fight, and I do not hope to inspire fear though my means.~
-== X3HelgaB ~Pah, ye place yer fears towards the ones ye save? Do as ye wish, though I see nae but a blade used wrongly.~
+== BC0Siren ~烈怒……我从不敢引以为荣地去使。但凡能不使，我便不使。~
+== X3HelgaB ~我看你没那么天真。邪恶就得被打倒，而这事靠剑来做，不靠盾。~
+== BC0Siren ~我打，是为了护。打倒恶徒、斩除邪恶……那是许多人抢着去做的差事。我见过太多无辜者倒下，声音无人听见。我是为他们而战，也不指望我的手段能教人畏惧。~
+== X3HelgaB ~呸，你把你的惧怕都留给你要救的人么？随你便吧，我只看见一柄用错了的剑。~
 EXIT

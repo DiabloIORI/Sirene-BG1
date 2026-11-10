@@ -10,7 +10,7 @@ THEN
   RESPONSE #100
     SetGlobal("bd_C0Sirene_ot","bd4100",1)
     SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",ONE_ROUND)
-    DisplayStringHead("C0Sirene",~What- what have you done, <CHARNAME>?! Have... have you fallen into the darkness at last?~)
+    DisplayStringHead("C0Sirene",~你——你做了什么，<CHARNAME>？！你……你终于也坠入黑暗了么？~)
 END
 
 IF
@@ -28,7 +28,7 @@ THEN
   RESPONSE #100
     SetGlobal("bd_C0Sirene_ot","bd4100",1)
     SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
-    DisplayStringHead("C0Sirene",~No. NO! <CHARNAME> could not have been the one... <PRO_HESHE> could not!~)
+    DisplayStringHead("C0Sirene",~不。不！<CHARNAME>不可能是那个人……<PRO_HESHE>不可能！~)
 END
 
 IF
@@ -45,5 +45,5 @@ THEN
   RESPONSE #100
     SetGlobal("bd_C0Sirene_ot","bd4100",1)
     SetGlobalTimer("bd_mdd1352_ot_timer","bd4100",9)
-    DisplayStringHead("C0Sirene",~No... 'twas not <CHARNAME>! <PRO_HESHE> is a good <PRO_MANWOMAN>, it could not possibly have been <PRO_HESHE>!~)
+    DisplayStringHead("C0Sirene",~不……不是<CHARNAME>！<PRO_HESHE>是个好<PRO_MANWOMAN>，绝不可能<PRO_HESHE>！~)
 END

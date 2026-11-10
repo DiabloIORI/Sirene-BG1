@@ -2,7 +2,7 @@ IF
 	Global("C02MysteryShout","LOCALS",1)
 THEN
 RESPONSE #100
-	DisplayStringHead(Myself,~Come, Nazthuret. I call upon you to test these whelps.~)
+	DisplayStringHead(Myself,~来吧，纳兹苏雷特。我召你来试这些崽子。~)
 	SetGlobal("C02MysteryShout","LOCALS",2)
 	Continue()
 END

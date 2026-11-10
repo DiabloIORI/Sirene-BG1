@@ -467,7 +467,7 @@ IF
 THEN
   RESPONSE #100
 	SetGlobal("C02SireneMorenthene","LOCALS",1)
-	DisplayStringHead(Myself,~By Ilmater, what a mighty beast... how shall we proceed, <CHARNAME>?~)
+	DisplayStringHead(Myself,~以伊尔梅特之名，好一头猛兽……我们该怎么应对，<CHARNAME>？~)
 END
 
 // Tender of the Dead

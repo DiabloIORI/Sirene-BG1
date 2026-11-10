@@ -4,6 +4,6 @@ IF
 THEN
 RESPONSE #100
 	SetGlobal("C02DemonKnight","LOCALS",1)
-	DisplayStringHead(Myself,~**IN THE NAME OF THE CHOSEN, I SHALL REND THE FLESH FROM THY BONES!**~)
+	DisplayStringHead(Myself,~**以受选者之名，我要把你的血肉从骨上剥下来！**~)
 	Continue()
 END

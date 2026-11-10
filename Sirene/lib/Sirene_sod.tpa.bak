@@ -1,0 +1,157 @@
+EXTEND_TOP ~BD0111.bcs~ ~%MOD_FOLDER%/Scripts/BD0111.baf~
+
+COPY ~%MOD_FOLDER%/creatures/C02Siren.cre~ ~override/C02Siren.cre~
+  SAY NAME1 ~Sirene~
+  SAY NAME2 ~Sirene~
+  WRITE_ASCII 0x248 ~C02Siren~ #8  //override script
+  WRITE_ASCII 0x280 ~C0Sirene~ #32  //DV
+  WRITE_ASCII 0x2cc ~C02Siren~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~SireneM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~SireneL~ #8   //medium portrait
+  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive certain death by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.
+  
+Sirene returned at Baldur's Gate after the fall of the Iron Throne to tend to the injured and those seeking refuge from of the crusade, and has joined your band in hope of taking a more direct approach to ending the Shining Lady's threat. Although she is showing signs of uncertainty towards fighting against the good men swayed by the crusade, she has assured you that she is fully committed to your cause so long as your hold good intentions.~
+  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
+  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
+  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
+  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
+  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
+  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
+  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
+  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
+  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
+  SAY DAMAGE ~Ngh!~ [C0SR013]
+  SAY DYING ~Ilmater, take me...~ [C0SR014a]
+  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
+  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
+  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
+  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
+  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
+  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
+  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
+  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
+  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
+  SAY SELECT_COMMON4 ~What is it?~ [C0SR024]
+  SAY SELECT_COMMON5 ~I am at your side.~ [C0SR025]
+  SAY SELECT_COMMON6 ~Whatever you require.~ [C0SR026]
+  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
+  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
+  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
+  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
+  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
+  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
+  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
+  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
+  SAY SET_A_TRAP ~~ []
+  SAY HIDDEN_IN_SHADOWS ~~ []
+  SAY PICKED_POCKET ~~ []
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~C0ILM~))
+  
+COMPILE	~%MOD_FOLDER%/Dialogue/dialog.d~ 
+	~%MOD_FOLDER%/Dialogue/C02Siren.d~ 
+	~%MOD_FOLDER%/Dialogue/C02SireP.d~ 
+	~%MOD_FOLDER%/Dialogue/C02SireJ.d~ 
+	~%MOD_FOLDER%/Dialogue/C02SirB.d~
+	~%MOD_FOLDER%/Dialogue/C02SGlen.d~
+	
+	~%MOD_FOLDER%/Scripts/C02Reset.baf~ 
+	~%MOD_FOLDER%/Scripts/C02Siren.baf~
+	~%MOD_FOLDER%/Scripts/C02SBANT.baf~
+	~%MOD_FOLDER%/Scripts/C02DemKn.baf~
+
+EXTEND_TOP ~BDINTRO.bcs~ ~%MOD_FOLDER%/scripts/BDINTRO.baf~
+EXTEND_TOP ~bd0103.bcs~ ~%MOD_FOLDER%/scripts/bd0103.baf~
+EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/scripts/bd0120.baf~
+EXTEND_TOP ~bd0130.bcs~ ~%MOD_FOLDER%/scripts/bd0130.baf~
+EXTEND_TOP ~bd1000.bcs~ ~%MOD_FOLDER%/scripts/bd1000.baf~
+EXTEND_TOP ~bd3000.bcs~ ~%MOD_FOLDER%/scripts/bd3000.baf~
+EXTEND_TOP ~bd4100.bcs~ ~%MOD_FOLDER%/scripts/bd4100.baf~
+EXTEND_TOP ~bd4300.bcs~ ~%MOD_FOLDER%/scripts/bd4300.baf~
+EXTEND_TOP ~bd7100.bcs~ ~%MOD_FOLDER%/scripts/bd7100.baf~
+EXTEND_TOP ~bd7300.bcs~ ~%MOD_FOLDER%/scripts/bd7300.baf~
+EXTEND_TOP ~bdcut61.bcs~ ~%MOD_FOLDER%/scripts/bdcut61.baf~
+EXTEND_TOP ~bdparty.bcs~ ~%MOD_FOLDER%/scripts/bdparty.baf~
+EXTEND_TOP ~bdsdd304.bcs~ ~%MOD_FOLDER%/scripts/bdsdd304.baf~
+EXTEND_TOP ~bd4601.bcs~ ~%MOD_FOLDER%/scripts/bd4601.baf~
+EXTEND_TOP ~bd0104.bcs~ ~%MOD_FOLDER%/scripts/bd0104.baf~
+EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/scripts/bdcut58.baf~
+
+APPEND ~bddialog.2da~ ~C0Sirene C02SireP C02SireJ~
+  UNLESS ~C0Sirene~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~bdbanter.2da~ THEN BEGIN
+APPEND ~bdbanter.2da~ ~C0Sirene C02SireB~
+  UNLESS ~C0Sirene~
+
+END
+	
+COPY ~%MOD_FOLDER%/items/c02amul.BAM~ ~override~
+COPY ~%MOD_FOLDER%/items/c02amul.eff~ ~override~
+COPY ~%MOD_FOLDER%/items/c02amul2.eff~ ~override~
+COPY ~%MOD_FOLDER%/Items/c02amul.itm~ ~override/c02amul.itm~
+SAY NAME1 ~Silver Necklace~
+SAY NAME2 ~Painbearer's Amulet~
+SAY DESC ~This coin-sized silver disc has the holy symbol of Ilmater crudely printed on top. While its craftsmanship leaves much to be desired, wearing it provides the bearer with an aura of protection, even more so if the wearer is faithful to the Crying God.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 (Paladins), +1 (others)
+– Hit Points: +10 (Paladins)
+– Protection from Evil
+
+Weight: 1~
+
+COPY ~%MOD_FOLDER%/items/c02plat.BAM~ ~override~
+COPY ~%MOD_FOLDER%/Items/c02plat.itm~ ~override/c02plat.itm~
+SAY NAME1 ~Full Plate Armor~
+SAY NAME2 ~Abyssal Plate Armor~
+SAY DESC ~This absurdly heavy suit of full plate is forged out of some extraplanar metal, making it difficult to wear and move in but extremely durable. Letters in the Abyssal language are carved on the different sections and occasionally give off a faint, hot glow.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: -1
+– 20% fire resistance
+– 20% cold resistance
+
+Armor Class: -1 (-5 vs. slashing, -4 vs. piercing and missile)
+Requires:
+ 18 Strength
+
+Weight: 100~
+
+COPY ~%MOD_FOLDER%/Items/c02sclck.itm~ ~override/c02sclck.itm~
+SAY NAME1 ~Leafen Cloak~
+SAY NAME2 ~Leafen Cloak~
+SAY DESC ~This cloak, made entirely of large leaves and spider silk, was hand-crafted by Jaheira to replace Sirene's usual cloak, which was deemed 'too visible for practical wear'. Despite looking as though it could tear at the slightest bit of force, it is remarkably sturdy.
+
+Equipped abilities:
+– Armor Class: +1
+– Saving Throws: +1
+– Hide in Shadows: +15%
+
+Weight: 1~
+
+COPY ~%MOD_FOLDER%/Creatures/C02SirB.cre~ ~override/C02SirB.cre~
+WRITE_ASCII 0x248 ~C02SirB~  #8  // override
+WRITE_ASCII 0x2cc ~C02SirB~ #8  // dialogue
+WRITE_ASCII 0x280 ~C02SirB~ #32 // death variable
+SAY NAME1 ~Mysterious Figure~
+SAY NAME2 ~Mysterious Figure~
+
+COPY ~%MOD_FOLDER%/Creatures/C02DemKn.cre~ ~override/C02DemKn.cre~
+WRITE_ASCII 0x248 ~C02DemKn~  #8  // override
+WRITE_ASCII 0x280 ~C02DemKn~ #32 // death variable
+SAY NAME1 ~Demon Knight~
+SAY NAME2 ~Demon Knight~
+
+COPY ~%MOD_FOLDER%/Creatures/C02SGlen.cre~ ~override/C02SGlen.cre~
+WRITE_ASCII 0x248 ~C02SGlen~  #8  // override
+WRITE_ASCII 0x2cc ~C02SGlen~ #8  // dialogue
+WRITE_ASCII 0x280 ~C02SGlen~ #32 // death variable
+SAY NAME1 ~Glen~
+SAY NAME2 ~Glen~
